@@ -6,15 +6,4 @@
       <class name="com.qa.testcaases.GermanyRegister"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.qa.testcaases.GermanyRegister">
-        <methods>
-          <include name="setUp"/>
-          <include name="actionaftrtest"/>
-          <include name="testRegister"/>
-        </methods>
-      </class> <!-- com.qa.testcaases.GermanyRegister -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

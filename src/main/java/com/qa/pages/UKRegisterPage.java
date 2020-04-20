@@ -56,18 +56,21 @@ public class UKRegisterPage extends TestBaseUK
 	
 	public void SelectDay()
 	{
+		DayBirthDay.click();
 		Select select= new Select(DayBirthDay);
 		select.selectByVisibleText("11");	
 	}
 	
 	public void SelectMonth()
 	{
+		DayMonth.click();
 		Select select= new Select(DayMonth);
 		select.selectByVisibleText("8");	
 	}
 	
 	public void SelectYear()
 	{
+		DayYear.click();
 		Select select= new Select(DayYear);
 		select.selectByVisibleText("1990");	
 	}
