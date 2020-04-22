@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="54989" started-at="2020-04-19T09:49:10Z" finished-at="2020-04-19T09:50:05Z">
+  <suite name="Default suite" duration-ms="46574" started-at="2020-04-22T14:29:08Z" finished-at="2020-04-22T14:29:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="54989" started-at="2020-04-19T09:49:10Z" finished-at="2020-04-19T09:50:05Z">
-      <class name="com.qa.testcaases.GermanyRegister">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcaases.GermanyRegister@1fbc7afb]" name="setUp" is-config="true" duration-ms="23321" started-at="2020-04-19T15:19:10Z" finished-at="2020-04-19T15:19:33Z">
+    <test name="Default test" duration-ms="46574" started-at="2020-04-22T14:29:08Z" finished-at="2020-04-22T14:29:54Z">
+      <class name="com.qa.testcaases.RegisterTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcaases.RegisterTest@1fbc7afb]" name="setUp" is-config="true" duration-ms="21590" started-at="2020-04-22T19:59:08Z" finished-at="2020-04-22T19:59:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testRegister()[pri:1, instance:com.qa.testcaases.GermanyRegister@1fbc7afb]" name="testRegister" duration-ms="31347" started-at="2020-04-19T15:19:33Z" finished-at="2020-04-19T15:20:05Z">
+        <test-method status="PASS" signature="testregister()[pri:1, instance:com.qa.testcaases.RegisterTest@1fbc7afb]" name="testregister" duration-ms="24571" started-at="2020-04-22T19:59:30Z" finished-at="2020-04-22T19:59:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRegister -->
-        <test-method status="PASS" signature="actionaftrtest()[pri:0, instance:com.qa.testcaases.GermanyRegister@1fbc7afb]" name="actionaftrtest" is-config="true" duration-ms="294" started-at="2020-04-19T15:20:05Z" finished-at="2020-04-19T15:20:05Z">
+        </test-method> <!-- testregister -->
+        <test-method status="PASS" signature="actionaftrtest()[pri:0, instance:com.qa.testcaases.RegisterTest@1fbc7afb]" name="actionaftrtest" is-config="true" duration-ms="383" started-at="2020-04-22T19:59:54Z" finished-at="2020-04-22T19:59:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- actionaftrtest -->
-      </class> <!-- com.qa.testcaases.GermanyRegister -->
+      </class> <!-- com.qa.testcaases.RegisterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

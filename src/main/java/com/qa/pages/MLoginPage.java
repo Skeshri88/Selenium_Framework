@@ -14,9 +14,10 @@ public class MLoginPage extends TestBaseAssignment3
 	@FindBy(xpath="//li[@id='react-autowhatever-1-section-0-item-0']")
 	WebElement FromFieldDropdownselection;
 	
-
+	//input[@placeholder='To']
+	//label[@for='toCity']
 	
-	@FindBy(xpath="//label[@for='toCity']")
+	@FindBy(xpath="//input[@placeholder='To']")
 	WebElement ToField;
 	
 	@FindBy(xpath="//li[@id='react-autowhatever-1-section-0-item-0']")
@@ -46,16 +47,19 @@ public class MLoginPage extends TestBaseAssignment3
 	public void  EnterFromField() throws InterruptedException
 	{
 		Thread.sleep(2000);
-		FromField.sendKeys("Ranchi");
+		FromField.sendKeys(prop.getProperty("to"));
 		Thread.sleep(5000);
 		FromFieldDropdownselection.click();
+		
+		
+		
 	}
 	
 	
 	public void  EnterToField() throws InterruptedException
 	{
 		Thread.sleep(2000);
-		ToField.sendKeys("Mumbai");
+		ToField.sendKeys(prop.getProperty("from"));
 		Thread.sleep(5000);
 		ToFieldDropdownselection.click();
 	}

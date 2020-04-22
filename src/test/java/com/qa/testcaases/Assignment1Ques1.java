@@ -13,7 +13,7 @@ public class Assignment1Ques1 extends TestBase
 	
 	public Assignment1Ques1()
 	{
-		//super();
+		super();
 	}
 	
 	@BeforeMethod
@@ -26,19 +26,14 @@ public class Assignment1Ques1 extends TestBase
 	
 	@Test(priority=1)
 	//Click on selectable link
-	public void Clickl()
+	public void Clickl() throws InterruptedException
 	{
 	    HomePage t= new HomePage();
 		t.clickonselectablelink();
 		
 		SelectablePage ItemClickA= new SelectablePage();
-		ItemClickA.Item1();
-		ItemClickA.Item2();
-		ItemClickA.Item3();
-		ItemClickA.Item4();
-		ItemClickA.Item5();
-		ItemClickA.Item6();
-		ItemClickA.Item7();
+		ItemClickA.ClickAllItemList();
+		Thread.sleep(5000);
 			
 		
 	}

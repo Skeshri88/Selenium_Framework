@@ -1,5 +1,7 @@
 package com.qa.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -27,14 +29,36 @@ public class SelectablePage extends TestBase
 	@FindBy(xpath="//ol[@id='selectable']//li[6]")
 	WebElement Item6Click;
 	
-	@FindBy(xpath="//ol[@id='selectable']//li[7]")
+	@FindBy(xpath="//ol[@class='ui-widget-content ui-selectee']")
 	WebElement Item7Click;
+	
+	
+	@FindBy(xpath="//li[@class='ui-widget-content ui-selectee']")
+     public List<WebElement> AllItemList;
+	 
+	 
+	
 	
 	
 	
 	public SelectablePage()
 	{
 		PageFactory.initElements(driver,this);
+	}
+	
+	//Update code
+	public void ClickAllItemList()
+	{
+		int count= AllItemList.size();
+		System.out.println(count);	
+		
+		for (WebElement count1: AllItemList)
+		{
+			String text=count1.getText();
+			System.out.println(text);
+			count1.click();
+		}
+		
 	}
 	
 	
