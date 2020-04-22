@@ -120,17 +120,7 @@ public class RegisterPage extends TestBaseLanguage
 	
 	
 	
-	public void PhoneNoSelection()
-	{
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,500)");
-		PhoneNumber.sendKeys("+34912345678");
-	}
 	
-	public void PrivacySelection()
-	{
-		Privacy.click();
-	}
 	
 	public void logincheck() throws InterruptedException
 	{
