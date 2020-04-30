@@ -67,7 +67,7 @@ public class MLoginPage extends TestBaseAssignment3
 	public void  DepartureDate() throws InterruptedException
 	{
 		Thread.sleep(2000);
-		DepatureDate.click();
+		DepatureDate.sendKeys(prop.getProperty("MMTDate"));
 		DepartureDateSelection.click();
 		
 	}

@@ -79,38 +79,38 @@ public class RegisterPage extends TestBaseLanguage
 	//Common 
 	public void EnterEmail()
 	{
-		Email.sendKeys("Shailesh.keshri@wipro.com");
+		Email.sendKeys(prop.getProperty("Email"));
 	}
 	
 	public void EnterPassword()
 	{
-		Password.sendKeys("Shailesh.keshri@wipro.com");
+		Password.sendKeys(prop.getProperty("Password"));
 	}
 	
 	public void EnterConfirmPassword()
 	{
-		ConfirmPassword.sendKeys("Shailesh.keshri@wipro.com");
+		ConfirmPassword.sendKeys(prop.getProperty("ConfirmPassowrd"));
 	}
 	
 	public void SelectDay()
 	{
 		DayBirthDay.click();
 		Select select= new Select(DayBirthDay);
-		select.selectByVisibleText("11");	
+		select.selectByVisibleText(prop.getProperty("Day"));	
 	}
 	
 	public void SelectMonth()
 	{
 		DayMonth.click();
 		Select select= new Select(DayMonth);
-		select.selectByVisibleText("8");	
+		select.selectByVisibleText(prop.getProperty("Month"));	
 	}
 	
 	public void SelectYear()
 	{
 		DayYear.click();
 		Select select= new Select(DayYear);
-		select.selectByVisibleText("1990");	
+		select.selectByVisibleText(prop.getProperty("Year"));	
 	}
 	
 	public void ClickRegister()
@@ -129,17 +129,17 @@ public class RegisterPage extends TestBaseLanguage
 		if(urlName.equals("https://www.olaz.de/de-de"))
 		{
 			Female1.click();
-			FirstName1.sendKeys("Shailesh");
-			LastName1.sendKeys("Keshri");
+			FirstName1.sendKeys(prop.getProperty("FirstName"));
+			LastName1.sendKeys(prop.getProperty("LastName"));
 			Thread.sleep(5000);
 			Country1.click();
 			Thread.sleep(2000);
 			Select select4= new Select(Country1);
-			select4.selectByVisibleText("Deutschland");
+			select4.selectByVisibleText(prop.getProperty("Country"));
 			Thread.sleep(5000);
-			Address1.sendKeys("Asdss");
-			Post1.sendKeys("10115");
-			City1.sendKeys("1234");
+			Address1.sendKeys(prop.getProperty("Address"));
+			Post1.sendKeys(prop.getProperty("Post"));
+			City1.sendKeys(prop.getProperty("City"));
 			
 			
 		}
@@ -147,10 +147,10 @@ public class RegisterPage extends TestBaseLanguage
 		else if(urlName.equals("https://www.olay.es/es-es"))
 		{
 			Female1.click();
-			FirstName1.sendKeys("Shailesh1");
-			LastName1.sendKeys("Keshri1");
-			MiddleName.sendKeys("Kumar");
-			PhoneNumber.sendKeys("+34912345678");
+			FirstName1.sendKeys(prop.getProperty("FirstName"));
+			LastName1.sendKeys(prop.getProperty("LastName"));
+			MiddleName.sendKeys(prop.getProperty("MiddleName"));
+			PhoneNumber.sendKeys(prop.getProperty("PhoneNumber"));
 			Privacy.click();
 		}
 		

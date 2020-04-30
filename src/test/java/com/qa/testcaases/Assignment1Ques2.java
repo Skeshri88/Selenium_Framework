@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
+import com.qa.pages.ContactHomePage;
 import com.qa.pages.ContactPage;
 import com.qa.pages.HomePage;
 import com.qa.pages.SelectablePage;
@@ -41,6 +42,12 @@ public class Assignment1Ques2 extends TestBase
 		contactpage.verifyGoogleLink();
 		contactpage.verifyGoogleLinkishere();
 		contactpage.clickSubmitButton();
+		
+		ContactHomePage contacthomepage= new ContactHomePage();
+		contacthomepage.SearchButton();
+		
+		
+		
 		
 		
 		

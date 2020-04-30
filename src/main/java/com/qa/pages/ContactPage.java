@@ -33,14 +33,6 @@ public class ContactPage extends TestBase
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
 	public ContactPage()
 	{
 		//Initializing all above elements 
@@ -50,7 +42,7 @@ public class ContactPage extends TestBase
 	
 	public void EnterFirstName() 
 	{
-		FirstName.sendKeys("Shailesh");		
+		FirstName.sendKeys(prop.getProperty("ContactFirstName"));		
 	}
 	
 	
@@ -58,7 +50,7 @@ public class ContactPage extends TestBase
 	
 	public void  EnterLastName()
 	{
-		LastName.sendKeys("Keshri");
+		LastName.sendKeys(prop.getProperty("ContactLasttName"));
 		
 		
 	}
@@ -66,12 +58,12 @@ public class ContactPage extends TestBase
 	
 	public void  EnterCountry()
 	{
-		Country.sendKeys("India");
+		Country.sendKeys(prop.getProperty("ContactCountry"));
 	}
 	
 	public void  EnterSubject()
 	{
-		Subject.sendKeys("Shailesh Keshri Subject");
+		Subject.sendKeys(prop.getProperty("ContactSubject"));
 	}
 	
 	public void verifyGoogleLink()
@@ -86,9 +78,10 @@ public class ContactPage extends TestBase
 	}
 
 	
-	public void clickSubmitButton()
+	public ContactHomePage clickSubmitButton()
 	{
 		Submit.click();
+		return new  ContactHomePage();
 	}
 	
 
