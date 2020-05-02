@@ -33,6 +33,7 @@ public class Assignment1Ques4 extends TestBase
 		
 		DatePickerPage datepickerpage = new DatePickerPage ();
 		datepickerpage.Selectdate();
+		datepickerpage.verificationDate();
 				
 		
 	}

@@ -32,7 +32,7 @@ public class DroppablePage extends TestBase
 	public void OperationDrag()
 	{
 		Actions actions= new Actions(driver);
-		actions.dragAndDrop(DragMe, DropMe).perform();
+		actions.dragAndDrop(DragMe,DropMe ).perform();
 		
    }
 	
@@ -51,9 +51,11 @@ public class DroppablePage extends TestBase
 			System.out.println("Text not Verified");
 		}
 				
+	
+	
+	
+	
+	
+	
 	}
-	
-	
-	
-
 }

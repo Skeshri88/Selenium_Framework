@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import com.qa.base.TestBaseLanguage;
 import com.qa.pages.HomePage;
+import com.qa.pages.OlayHomePage;
 import com.qa.pages.RegisterPage;
 import com.qa.pages.SelectablePage;
 import com.qa.pages.WelcomePage;
@@ -41,7 +42,13 @@ public class RegisterTest extends TestBaseLanguage
 	    registerpage.SelectMonth();
 	    registerpage.SelectYear();   
 	    registerpage.logincheck();
+	    registerpage.ClickRegister();
 	    
+	    OlayHomePage olayhomepage= new OlayHomePage();
+	    Thread.sleep(5000);
+	    olayhomepage.verifySubscriptiontext();
+	    
+
 	    
 	    
 		

@@ -12,6 +12,11 @@ public class DatePickerPage extends TestBase
 	@FindBy(xpath="//input[@id='datepicker']")
 	WebElement DatePickerPoup;
 	
+	//@FindBy(xpath="//div[@id='ui-datepicker-div']")
+	//WebElement ClosePopup;
+	
+	
+	
 	
 		
 	public DatePickerPage()
@@ -22,23 +27,21 @@ public class DatePickerPage extends TestBase
 	public void  Selectdate() throws InterruptedException
 	{
 		DatePickerPoup.sendKeys(prop.getProperty("DatePickerDate"));
-		Thread.sleep(5000);
-		DatePickerPoup.click();
-		//DatePickerNextButton.click();
-		//DateSelection.click();	
+		Thread.sleep(5000);	
 	}
 	
 	public void verificationDate()
 	{
-		String text="04/30/2020";
-		String text1=DatePickerPoup.getText();
-		if(text.equalsIgnoreCase(text1))
+		String text="05/30/2020";
+		String text1=DatePickerPoup.getAttribute("type");
+		System.out.println(text1);
+		if( text==text1)
 		{
-			System.out.print("Text verified");
+			System.out.println("Test Pass");
 		}
 		else
 		{
-			System.out.println("Text is not verified");
+			System.out.println("Test Fail");
 		}
 		
 		

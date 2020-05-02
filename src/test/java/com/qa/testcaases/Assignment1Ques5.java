@@ -33,6 +33,7 @@ public class Assignment1Ques5 extends TestBase
 		
 		SelecMenuPage selecmenupage= new SelecMenuPage();
 		selecmenupage.SelectSpeed();
+		Thread.sleep(5000);
 		selecmenupage.SelectFile();
 		selecmenupage.SelectNumber();
 		selecmenupage.SelectTitle();

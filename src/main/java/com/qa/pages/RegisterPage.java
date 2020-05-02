@@ -113,9 +113,10 @@ public class RegisterPage extends TestBaseLanguage
 		select.selectByVisibleText(prop.getProperty("Year"));	
 	}
 	
-	public void ClickRegister()
+	public OlayHomePage ClickRegister()
 	{
 		Register.click();
+		 return new OlayHomePage();
 	}
 	
 	
@@ -144,7 +145,7 @@ public class RegisterPage extends TestBaseLanguage
 			
 		}
 		
-		else if(urlName.equals("https://www.olay.es/es-es"))
+		else  if(urlName.equals("https://www.olay.es/es-es"))
 		{
 			Female1.click();
 			FirstName1.sendKeys(prop.getProperty("FirstName"));
@@ -154,11 +155,9 @@ public class RegisterPage extends TestBaseLanguage
 			Privacy.click();
 		}
 		
-		else
-		{
-			Register.click();
-		}
+		
 	}
+	
 	
 	
 	

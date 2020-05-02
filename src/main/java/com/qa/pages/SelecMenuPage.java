@@ -1,5 +1,7 @@
 package com.qa.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,25 +14,25 @@ public class SelecMenuPage extends TestBase
 	@FindBy(xpath="//span[@id='speed-button']")
 	WebElement selectaSpeed;
 	
-	@FindBy(xpath="//div[@id='ui-id-4']")
-	WebElement speeddropdown;
+	@FindBy(xpath="//span[@id='speed-button']")
+	List<WebElement> optionsselectaSpeed;
 	
-	
-	
-	
+	//Selecting a File
 	@FindBy(xpath="//span[@id='files-button']")
 	WebElement selectaFile;
 	
-	@FindBy(xpath="//div[@id='ui-id-8']")
-	WebElement FileDropDown;
+	@FindBy(xpath="//span[@id='files-button']")
+	List<WebElement> optionsselectaFile;
 	
 	
 	
 	@FindBy(xpath="//span[@id='number-button']")
 	WebElement selectaNumber;
 	
-	@FindBy(xpath="//div[@id='ui-id-12']")
-	WebElement NumberDropdown;
+	@FindBy(xpath="//span[@id='number-button']")
+	List<WebElement> optionsselectaNumber;
+	
+	
 	
 	
 	
@@ -38,8 +40,10 @@ public class SelecMenuPage extends TestBase
 	@FindBy(xpath="//span[@id='salutation-button']")
 	WebElement selectaTitle;
 	
-	@FindBy(xpath="//div[@id='ui-id-30']")
-	WebElement TitleDropDown;
+	@FindBy(xpath="//span[@id='salutation-button']")
+	List<WebElement> optionsselectaTitle;
+	
+	
 	
 	public SelecMenuPage()
 	{
@@ -49,21 +53,45 @@ public class SelecMenuPage extends TestBase
 	
 	 public void SelectSpeed()
 	 {
-		 selectaSpeed.click();
-		 speeddropdown.click();
+		 //selectaSpeed.click();
+		 for(WebElement option : optionsselectaSpeed) 
+		 {
+			    if (option.getText().equals(prop.getProperty("Select a Speed1")))
+			    {
+			        option.click();
+			    }
 		 
 	  }
+	 }
+	 
 	 
 	 public void SelectFile()
 	 {
 		 selectaFile.click();
-		 FileDropDown.click();
+		 for(WebElement option : optionsselectaFile) 
+		 {
+			    if (option.getText().equals(prop.getProperty("Select a File1"))) 
+			    {
+			        option.click();
+			    }
+		 
+	  }
 	 }
+	 
+		
 	 
 	 public void SelectNumber()
 	 {
 		 selectaNumber.click();
-		 NumberDropdown.click();
+		 for(WebElement option : optionsselectaTitle) 
+		 {
+			    if (option.getText().equals(prop.getProperty("Select a number1")))
+			    {
+			        option.click();
+			    }
+		 
+	  }
+		 
 		 
 		 
 	 }
@@ -72,7 +100,16 @@ public class SelecMenuPage extends TestBase
 	 public void SelectTitle()
 	 {
 		 selectaTitle.click();
-		 TitleDropDown.click();
+		 selectaNumber.click();
+		 for(WebElement option : optionsselectaTitle) 
+		 {
+			    if (option.getText().equals(prop.getProperty("Select a title1")))
+			    {
+			        option.click();
+			    }
+		 
+	  }
+		
 		 
 		 
 	 }

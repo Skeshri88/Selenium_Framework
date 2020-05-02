@@ -23,7 +23,16 @@ public class ContactHomePage extends TestBase
 	
 	public void SearchButton() 
 	{
-		Search.isDisplayed();		
+		if(Search.isDisplayed())
+		{
+			System.out.println("Test Pass");
+		}
+		
+		else 
+		{
+			System.out.println("Test Failed");
+		}
+				
 	}
 	
 

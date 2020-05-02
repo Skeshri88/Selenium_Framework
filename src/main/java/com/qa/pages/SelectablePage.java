@@ -10,7 +10,8 @@ import com.qa.base.TestBase;
 
 public class SelectablePage extends TestBase
 {
-	//Item1 Xpath
+	public String text;
+	
 	@FindBy(xpath="//ol[@id='selectable']//li[1]")
 	WebElement Item1Click;
 	
@@ -52,12 +53,27 @@ public class SelectablePage extends TestBase
 		int count= AllItemList.size();
 		System.out.println(count);	
 		
+		
+		
 		for (WebElement count1: AllItemList)
 		{
-			String text=count1.getText();
+			String text=count1.getText();	
+			String text1= count1.getAttribute(text);
 			System.out.println(text);
+			//Output Item 1....Item 7
+			
+			if(text==text1)
+			{
+				System.out.println("Test Pass");
+			}
+			else
+			{
+				System.out.println("Test Fail");
+			}
 			count1.click();
 		}
+		
+		
 		
 	}
 	

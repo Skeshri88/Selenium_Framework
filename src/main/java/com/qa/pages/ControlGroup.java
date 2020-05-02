@@ -1,5 +1,7 @@
 package com.qa.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,8 +14,9 @@ public class ControlGroup extends TestBase
 	@FindBy(xpath="//span[@id='ui-id-8-button']")
 	WebElement CarSize;
 	
-	@FindBy(xpath="//div[@id='ui-id-10']")
-	WebElement CarSizeDropDownSelection;
+	@FindBy(xpath="//span[@id='ui-id-8-button']")
+	List<WebElement> optionsCarSize;
+	
 	
 	
 	
@@ -25,7 +28,7 @@ public class ControlGroup extends TestBase
 	
 	@FindBy(xpath="//input[@id='vertical-spinner']")
 	WebElement NoOfcars;
-	
+
 	
 	@FindBy(xpath="//button[@id='book']")
 	WebElement Book;
@@ -48,7 +51,14 @@ public class ControlGroup extends TestBase
 	public void selectcarsize()
 	{
 		CarSize.click();
-		CarSizeDropDownSelection.click();		
+		 for(WebElement option : optionsCarSize) 
+		 {
+			    if (option.getText().equals(prop.getProperty("Car Size")))
+			    {
+			        option.click();
+			    }
+		 
+	  }		
 	}
 	
 	public void radiobuttonselectinStandard()
@@ -63,7 +73,7 @@ public class ControlGroup extends TestBase
 	
 	public void enterNoofcars()
 	{
-		NoOfcars.sendKeys("2");
+		NoOfcars.sendKeys(prop.getProperty("No of cars"));
 	}
 	
 	
